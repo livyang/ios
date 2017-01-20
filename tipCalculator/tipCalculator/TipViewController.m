@@ -24,18 +24,23 @@
     [self updateValues];
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)onTap:(UITapGestureRecognizer *)sender {
-    [self.view endEditing:YES];
-    [self updateValues];
+        [self.view endEditing:YES];
+        [self updateValues];
 }
+
 - (IBAction)onValueChanged:(id)sender {
+    NSInteger segmentIndex = [self.tipControl selectedSegmentIndex];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:segmentIndex forKey:@"tipControlIndex"];
+    [defaults synchronize];
     [self updateValues];
+
 }
 
 - (void)updateValues {
@@ -50,5 +55,27 @@
     //update UI
     self.tipLabel.text = [NSString stringWithFormat:@"$%0.2f", tipAmount];
     self.totalLabel.text = [NSString stringWithFormat:@"$%0.2f", totalAmount];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    NSLog(@"view will appear");
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSInteger tipControlIndex = [defaults integerForKey:@"tipControlIndex"];
+    NSLog(@"tipControlIndex is %ld", (long)tipControlIndex);
+    [self.tipControl setSelectedSegmentIndex:tipControlIndex];
+    [self updateValues];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    NSLog(@"view did appear");
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    NSLog(@"view will disappear");
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    NSLog(@"view did disappear");
 }
 @end

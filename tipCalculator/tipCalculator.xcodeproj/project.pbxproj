@@ -13,6 +13,7 @@
 		10312B2C1E318C1A00EB6FAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10312B2A1E318C1A00EB6FAD /* Main.storyboard */; };
 		10312B2E1E318C1A00EB6FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10312B2D1E318C1A00EB6FAD /* Assets.xcassets */; };
 		10312B311E318C1A00EB6FAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10312B2F1E318C1A00EB6FAD /* LaunchScreen.storyboard */; };
+		10312B3A1E32904300EB6FAD /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10312B391E32904300EB6FAD /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		10312B2D1E318C1A00EB6FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10312B301E318C1A00EB6FAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10312B321E318C1A00EB6FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10312B381E32904300EB6FAD /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = ../SettingsViewController.h; sourceTree = "<group>"; };
+		10312B391E32904300EB6FAD /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = ../SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 		10312B201E318C1A00EB6FAD /* tipCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				10312B391E32904300EB6FAD /* SettingsViewController.m */,
+				10312B381E32904300EB6FAD /* SettingsViewController.h */,
 				10312B241E318C1A00EB6FAD /* AppDelegate.h */,
 				10312B251E318C1A00EB6FAD /* AppDelegate.m */,
 				10312B271E318C1A00EB6FAD /* TipViewController.h */,
@@ -154,6 +159,7 @@
 				10312B291E318C1A00EB6FAD /* TipViewController.m in Sources */,
 				10312B261E318C1A00EB6FAD /* AppDelegate.m in Sources */,
 				10312B231E318C1A00EB6FAD /* main.m in Sources */,
+				10312B3A1E32904300EB6FAD /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -65,6 +65,9 @@
                                     <segment title="20%"/>
                                     <segment title="25%"/>
                                 </segments>
+                                <connections>
+                                    <action selector="onValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="hKA-eT-bEr"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="qeX-b7-d5B">
                                 <rect key="frame" x="184" y="99" width="97" height="30"/>
@@ -80,7 +83,13 @@
                             <outletCollection property="gestureRecognizers" destination="XOJ-cX-mBS" appends="YES" id="o4O-LH-Npg"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="IUm-HM-zjX"/>
+                    <navigationItem key="navigationItem" id="IUm-HM-zjX">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="dmj-Mi-u4s">
+                            <connections>
+                                <segue destination="Nzt-67-RPd" kind="push" id="424-I6-Qud"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billTextField" destination="qeX-b7-d5B" id="xTl-c9-UGR"/>
                         <outlet property="tipControl" destination="Ngg-kK-Ldo" id="9t6-l0-Xnt"/>
@@ -89,9 +98,45 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="XOJ-cX-mBS"/>
+                <tapGestureRecognizer id="XOJ-cX-mBS">
+                    <connections>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="QML-Hv-3I1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="672.5" y="154.5"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="JYF-oN-DYa">
+            <objects>
+                <viewController id="Nzt-67-RPd" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HPm-of-jtl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="tFU-8d-IVf">
+                                <rect key="frame" x="100" y="177" width="121" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="15%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onValueChanged:" destination="Nzt-67-RPd" eventType="valueChanged" id="Tg4-zA-otR"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MIn-xf-FPd"/>
+                    <connections>
+                        <outlet property="tipControl" destination="tFU-8d-IVf" id="5bI-Ok-T6a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vve-wB-mgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1129" y="154"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lpN-MK-UfJ">
