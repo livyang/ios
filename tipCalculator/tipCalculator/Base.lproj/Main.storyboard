@@ -65,9 +65,6 @@
                                     <segment title="20%"/>
                                     <segment title="25%"/>
                                 </segments>
-                                <connections>
-                                    <action selector="onValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="T1y-Gl-7D8"/>
-                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="qeX-b7-d5B">
                                 <rect key="frame" x="184" y="99" width="97" height="30"/>
@@ -92,11 +89,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="XOJ-cX-mBS">
-                    <connections>
-                        <action selector="onTap:" destination="BYZ-38-t0r" id="U1m-jm-We0"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="XOJ-cX-mBS"/>
             </objects>
             <point key="canvasLocation" x="672.5" y="154.5"/>
         </scene>
